@@ -17,9 +17,9 @@ os.environ['PATH'] += r"C:/SeleniumDriver"
 driver = webdriver.Chrome()
 driver.get("https://dev-admin-msimga.azurewebsites.net/")
 my_email = driver.find_element(by='xpath', value='//*[@id="LoginName"]')
-my_email.send_keys('ProductTS@msimga.com')
+my_email.send_keys('')
 my_pw = driver.find_element(by='xpath', value='//*[@id="LoginPassword"]')
-my_pw.send_keys('Product1')
+my_pw.send_keys('')
 my_signin = driver.find_element(by='xpath', value='//*[@id="buttonSignIn"]')
 my_signin.click()
 
@@ -36,7 +36,7 @@ driver.execute_script("arguments[0].click();", workbooks_option)
 file_input = driver.find_element(By.ID, 'productworkbookfile')
 upload_button = driver.find_element(By.ID, 'buttonUploadWorkbook')
 
-folder_path = 'C:\\Users\\PrashanthKotha\\OneDrive - Millennial Specialty Insurance LLC\\Documents\\1_Dev'
+folder_path = 
 file_list = os.listdir(folder_path)
 uploaded_files = []
 
