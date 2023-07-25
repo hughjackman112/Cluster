@@ -3,7 +3,7 @@ import geopandas as gpd
 from shapely.geometry import Point
 
 # Define filepath
-filepath = r"C:\Users\PrashanthKotha\OneDrive - Millennial Specialty Insurance LLC\Documents\Geospatial Analysis\ESJune23\WildFire\NewWildfire.xlsx"
+filepath = r
 
 # Load Excel file using Pandas
 f = pd.read_excel(filepath, sheet_name=None)
@@ -32,7 +32,7 @@ for name, df in f.items():
     top_20_clusters = gdf.sort_values(by='points_within_ring', ascending=False).head(10)
     
     # Step 7: Save the top 20 clusters as the first Excel file
-    output_file_path_clusters = r"C:\Users\PrashanthKotha\OneDrive - Millennial Specialty Insurance LLC\Documents\Geospatial Analysis\ESJune23\WildFire\{}.xlsx".format(name)
+    output_file_path_clusters = r
     top_20_clusters.to_excel(output_file_path_clusters, index=False)
     print("Top 20 clusters saved to Excel file:", output_file_path_clusters)
     
@@ -41,6 +41,6 @@ for name, df in f.items():
     center_points.geometry = center_points['buffered_geometry'].centroid
     
     # Step 9: Save the center points as the second Excel file
-    output_file_path_center_points = r"C:\Users\PrashanthKotha\OneDrive - Millennial Specialty Insurance LLC\Documents\Geospatial Analysis\ESJune23\WildFire\{}.xlsx".format(name)
+    output_file_path_center_points = r
     center_points.to_excel(output_file_path_center_points, index=False)
     print("Center points of rings saved to Excel file:", output_file_path_center_points)
